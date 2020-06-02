@@ -24,3 +24,5 @@ for i in result:
 path = r"C:\Users\shantha\Documents\FYP\inria-bci-challenge\train_fir_slice.csv"
 final_df.to_csv(path)
 
+
+
