@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<title>Welcome to BCI</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('https://d2r55xnwy6nx47.cloudfront.net/uploads/2018/03/RecycleNetwork_1300Lede1.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+</style>
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-small">
+    Ramaiah Institute of Technology <br>
+    Department of Medical Electronics
+  </div>
+  <div class="w3-display-topcenter" style="padding-top: 100px;">
+    <form style="text-align:center" action="/test" method="POST" enctype="multipart/form-data">
+        <label>Upload a CSV File</label><br><input class="w3-center" type="file" name="file"> <br>
+        <input class="w3-center" type="submit" value="Upload">
+    </form>
+  </div>
+  <div class = "w3-display-middle" >
+    {% if output == None %}
+    <h1>Predicting...</h1>
+    {% else %}
+    <h1>The Model predicted : {{ output }}</h1>
+    {% endif %}
+  </div>
+</div>
+
+</body>
+</html>-
